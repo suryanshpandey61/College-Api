@@ -1,25 +1,30 @@
-// pages/index.tsx
-import '../app/globals.css'; 
-import React from 'react';
+import Link from 'next/link';
+import React from 'react'; 
+import '../../src/app/globals.css';
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <div className="flex  index-div flex-col g items-center justify-center min-h-screen bg-gray-100 p-8">
-        <h1 className='text-[40px] font-bold'>School Management Database</h1>
-      <div className="space-y-4">
-        <button className="bg-blue-500 mr-5 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-md transition duration-300 ease-in-out">
-          <a href="http://localhost:3000/api/students" className="flex items-center justify-center">
-            Students Data
-          </a>
-        </button>
-        <button className="bg-red-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow-md transition duration-300 ease-in-out">
-          <a href="http://localhost:3000/api/teachers" className="flex items-center justify-center">
-            Teachers Data
-          </a>
-        </button>
-      </div>
+    <div className='flex flex-col h-screen justify-center index-div items-center index-div bg-gray-100'>
+      <h1 className="text-black text-4xl font-bold mb-8">
+        Welcome to College Campus Database
+      </h1>
+      <nav>
+        <ul className="space-y-4">
+          <li>
+            <Link href="/students" className="text-blue-500 text-2xl hover:underline">
+              Students
+            </Link>
+          </li>
+          <li>
+            <Link href="/teacher" className="text-blue-500 text-2xl hover:underline">
+              Teachers
+            </Link>
+          </li>
+        
+        </ul>
+      </nav>
     </div>
   );
-};
+}
 
-export default HomePage;
+export default Home;
