@@ -11,12 +11,12 @@ const Home: React.FC = () => {
       <nav>
         <ul className="space-y-4">
           <li>
-            <Link href="/students" className="text-blue-500 text-2xl hover:underline">
+            <Link href="/students" className="text-white  font-bold text-3xl hover:underline">
               Students
             </Link>
           </li>
           <li>
-            <Link href="/teacher" className="text-blue-500 text-2xl hover:underline">
+            <Link href="/teacher" className="text-white text-3xl font-bold hover:underline">
               Teachers
             </Link>
           </li>
